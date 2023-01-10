@@ -1,12 +1,13 @@
-// import custom css
-import "./App.css";
-// import tailwind
+import Menu from "./components/Menu";
+import "./app.css";
 import "./index.css";
+import Cart from "./components/Cart";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
-    <div className="App text-3xl font-bold text-cyan-300 underline">
-      Cocoon App
+    <div>
+      <ProductDetail />
     </div>
   );
 }
