@@ -6,7 +6,7 @@ function ProductDetail() {
     <div className="py-4 px-10  bg-bgMain m-3 mx-5 flex flex-col md:flex-row gap-6">
        
        {/* product Image */}
-      <div className="bg-white text-gray-700 w-[90%] md:w-[50%] h-[80vh] shadow-lg rounded-[100%] p-6 hover:shadow-gray-400 flex flex-col  items-center gap-4 ">
+      <div className="bg-white text-gray-700 w-[90%] md:w-[50%] h-[80vh] shadow-lg rounded-[100%] p-6 shadow-gray-400 flex flex-col  items-center gap-4 ">
         <img
           src={image}
           alt=""
@@ -15,7 +15,7 @@ function ProductDetail() {
       </div>
       
        {/* product description */}
-      <div className="bg-white text-gray-700 w-full h-[25rem] shadow-lg rounded-md p-6 hover:shadow-gray-400 flex flex-col  gap-4 md:w-[50%] lg:w-[35%] md:ml-10">
+      <div className="bg-white md:my-8 text-gray-700 w-full h-[25rem] shadow-lg rounded-md p-6 hover:shadow-gray-400 flex flex-col  gap-4 md:w-[50%] lg:w-[35%] md:ml-10">
         <span className="text-2xl font-bold">Special Burger</span>
         <span className="text-xl font-bold">Description </span>
         <span className="text-xl">
