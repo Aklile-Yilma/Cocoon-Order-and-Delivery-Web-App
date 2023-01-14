@@ -3,7 +3,7 @@ import image from "../assets/images/pizza1.jpg";
 
 function ProductDetail() {
   return (
-    <div className="py-4 px-10  bg-bgMain m-3 mx-5 flex flex-col md:flex-row gap-6">
+    <div className="py-36 px-10  bg-bgMain   flex flex-col md:flex-row gap-6">
        
        {/* product Image */}
       <div className="bg-white text-gray-700 w-[90%] md:w-[50%] h-[80vh] shadow-lg rounded-[100%] p-6 shadow-gray-400 flex flex-col  items-center gap-4 ">
