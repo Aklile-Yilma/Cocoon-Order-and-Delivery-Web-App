@@ -1,0 +1,23 @@
+
+
+# GET  http://localhost:5000/ HTTP/1.1
+
+
+POST http://localhost:5000/register HTTP/1.1
+content-type: application/json
+
+{
+    "user": "sample_user3",
+    "pwd": "wed123"
+}
+
+
+POST http://localhost:5000/auth HTTP/1.1
+content-type: application/json
+
+{
+    "user": "sample_user3",
+    "pwd": "wed123"
+}
+
+
