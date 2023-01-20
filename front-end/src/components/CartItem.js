@@ -29,7 +29,7 @@ function CartItem() {
             <AddIcon />
           </div>
         </div>
-        <span className="text-main  font-bold">subutotal : 75 birr</span>
+        <span className="text-main  font-bold">subtotal : 75 birr</span>
       </div>
     </div>
   );
