@@ -13,7 +13,7 @@ const handleLogin = async (req, res) => {
 
   const foundUser = await User.findOne({ username: user }).exec();
 
-  if (!foundUser) return res.sendStatus(401); // unauthorized
+  if (!foundUser) return res.sendStatus(404); // user not found
   // check if password is the same
 
   const match = await bcrypt.compare(pwd, foundUser.password);
@@ -42,7 +42,7 @@ const handleLogin = async (req, res) => {
     //   save refresh token with current user to db
     foundUser.refreshToken = refreshToken;
     const result = await foundUser.save();
-    console.log(result);
+    // console.log(result);
 
     // Creates Secure Cookie with refresh token
     res.cookie("jwt", refreshToken, {

@@ -8,10 +8,6 @@ const verifyJWT = require("./src/middlewares/verifyJWT");
 const cookieParser = require("cookie-parser");
 connectDb();
 
-app.get("/", (req, res) => {
-  res.json("Hello Cocoon!");
-});
-
 //  built in middleware to handle url encoded form data
 app.use(express.urlencoded({ extended: false }));
 

@@ -1,4 +1,5 @@
 const verifyRoles = (...allowedRoles) => {
+  // an array of roles (e.g. [Role.Admin, Role.User] or ['Admin', 'User'])
   return (req, res, next) => {
     if (!req?.roles) return res.sendStatus(401);
 
