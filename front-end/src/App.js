@@ -11,7 +11,7 @@ function App() {
     <div className="flex flex-col ">
       <Header/>
       {/* <ProductDetail /> */}
-      <AboutCard/>
+      {/* <AboutCard/> */}
 
     </div>
   );
