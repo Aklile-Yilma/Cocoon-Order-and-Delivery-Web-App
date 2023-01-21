@@ -13,7 +13,7 @@ const AboutCard = () => {
           <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
             <div className="p-6 bg-stone-200 hover:bg-stone-400 hover:text-white transition duration-300 ease-in">
               <h1 className="text-2xl font-semibold mb-3">
-                Cities are crowded
+                About Cocoon
               </h1>
               <p className="leading-relaxed mb-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
