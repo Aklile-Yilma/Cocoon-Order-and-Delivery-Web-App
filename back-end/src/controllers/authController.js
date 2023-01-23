@@ -3,15 +3,15 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const handleLogin = async (req, res) => {
-  const { user, pwd } = req.body;
+  const { email, pwd } = req.body;
 
-  if (!user || !pwd) {
+  if (!email || !pwd) {
     return res.status(400).json({
       message: "username and password are required",
     });
   }
 
-  const foundUser = await User.findOne({ username: user }).exec();
+  const foundUser = await User.findOne({ email: email }).exec();
 
   if (!foundUser) return res.sendStatus(404); // user not found
   // check if password is the same
@@ -19,14 +19,13 @@ const handleLogin = async (req, res) => {
   const match = await bcrypt.compare(pwd, foundUser.password);
 
   if (match) {
-    const roles = Object.values(foundUser.roles);
-
+    const role = foundUser.role;
     // create Jwt
     const accessToken = jwt.sign(
       {
         UserInfo: {
-          username: foundUser.username,
-          roles: roles,
+          email: foundUser.email,
+          role: foundUser.role,
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
@@ -34,7 +33,7 @@ const handleLogin = async (req, res) => {
     );
 
     const refreshToken = jwt.sign(
-      { username: foundUser.username },
+      { email: foundUser.email },
       process.env.REFRESH_TOKEN_SECRET,
       { expiresIn: "30d" }
     );
@@ -52,7 +51,7 @@ const handleLogin = async (req, res) => {
       maxAge: 24 * 60 * 60 * 1000,
     });
 
-    res.json({ roles, accessToken });
+    res.json({ role, accessToken });
   } else {
     res.sendStatus(401);
   }
