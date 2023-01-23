@@ -7,8 +7,8 @@ const Header =()=>{
     const[open, setOpen]= useState(false)
     const showNavbar = ()=>{
         setOpen(!open)
-
     }
+    
     const [isScrolled, setIsScrolled] = useState(false)
     useEffect (() => {
         const handleScroll = () => {
@@ -31,11 +31,10 @@ const Header =()=>{
                     <img src={image1} className="flex-shrink-0 truncate block m-auto flex-row overflow-hidden flex-col w-28"/>
                 </div>
                     <div className=" justify-between pl-3.5 block  flex-col">
-                        <ul className={` sm:  ${open ? " text-center": "hidden"} md:flex items-center pt-7 pr-3 pl-14 list-none xl:w-auto lg:flex `} >
+                        <ul className={` sm:  ${open ? " text-center": "hidden" } md:flex items-center pt-7 pr-3 pl-14 list-none xl:w-auto lg:flex `} >
                             <li className=" align-middle  mr-5"><a href="#" className="no-underline text-black font-bold ">Menu </a></li>
                             <li className=" align-middle mr-5"><a href="#" className="no-underline text-black font-bold">About</a></li>
                             <li className=" align-middle mr-5"><a href="#" className="no-underline text-black font-bold">Contact</a></li>
-
                         </ul> 
                     </div> 
                 

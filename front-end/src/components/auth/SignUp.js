@@ -1,10 +1,10 @@
 import React from 'react';
-import loginImg from '../assets/LoginAssets/login-2.jpg'
-import cocoonImg from '../assets/LoginAssets/logococoon.png'
+// import loginImg from '../assets/LoginAssets/login-2.jpg'
+import cocoonImg from '../../assets/LoginAssets/logococoon.png'
 import {FcGoogle} from 'react-icons/fc'
-import juiceImg from '../assets/LoginAssets/juice.png'
-import pizzaImg from '../assets/LoginAssets/pizza.png'
-import burgerImg from '../assets/LoginAssets/burger.png'
+// import juiceImg from '../assets/LoginAssets/juice.png'
+// import pizzaImg from '../assets/LoginAssets/pizza.png'
+// import burgerImg from '../assets/LoginAssets/burger.png'
 
 export default function SignUp() {
     return (
