@@ -12,17 +12,17 @@ function Home() {
       </div>
       <div className="mt-6 flex flex-col md:flex-row justify-center">
         <div className="flex flex-col items-center md:w-[30%]">
-          <img src={delivery} alt="" className="w-[75%] w-[40%] mb-3" />
+          <img src={delivery} alt="" className="md:w-[75%] w-[40%] mb-3" />
           <div className="flex flex-col items-center p-5 md:w-[100%] w-[75%] ">
             <h1 className="md:text-xl text-base font-bold ">Fast Delivery</h1>
-            <div className="w-[50px] h-[2px] bg-red-500 mt-2 mb-4"></div>
+            <div className="w-[50px] h-[2px] bg-main mt-2 mb-4"></div>
             <p className="text-center">
               Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
             </p>
           </div>
         </div>
         <div className="flex flex-col items-center md:w-[30%]">
-          <img src={order} alt="" className="w-[75%] w-[40%] mb-3" />
+          <img src={order} alt="" className="md:w-[75%] w-[40%] mb-3" />
           <div className="flex flex-col items-center p-5 md:w-[100%] w-[75%] ">
             <h1 className="md:text-xl text-base font-bold ">Fresh Food</h1>
             <div className="w-[50px] h-[2px] bg-red-500 mt-2 mb-4"></div>
