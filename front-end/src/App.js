@@ -3,6 +3,8 @@ import ProductDetail from "./components/product/ProductDetail";
 import Header from "./components/header/Header";
 import Menu from "./components/menu/Menu";
 import Cart from "./components/cart/Cart";
+import Menu from "./components/menu/Menu"
+import Cart from "./components/cart/Cart"
 import Login from "./components/auth/Login";
 import Home from "./components/Home";
 import SignUp from "./components/auth/SignUp";
@@ -22,6 +24,7 @@ function App() {
           <Route path="/logIn" element={<Login />}></Route>
           <Route path="/signUp" element={<SignUp />}></Route>
           <Route path="/food:id" element={<ProductDetail />}></Route>
+          <Route path="/food:id" element={<ProductDetail/>}></Route>
 
           {/* <Route path="/about" element={<About />}></Route> */}
         </Routes>
