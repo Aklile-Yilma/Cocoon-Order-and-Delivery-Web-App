@@ -1,17 +1,25 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
+const emailValidator = require("deep-email-validator");
 
 const handleNewUser = async (req, res) => {
-  const { user, pwd } = req.body;
+  const { user, email, fullname, pwd, phoneNum } = req.body;
 
-  if (!user || !pwd) {
+  if (!user || !email || !pwd || !fullname || !phoneNum) {
     return res.status(400).json({
-      message: "username and password are required",
+      message: "fullname, email, phoneNum and password are required",
     });
   }
 
+  const isValidEmail = (await emailValidator.validate(email)).valid;
+
+  if (!isValidEmail)
+    return res.status(400).json({
+      message: "email is invalid",
+    });
+
   //  check for duplicates usernames in the db
-  const duplicate = await User.findOne({ username: user }).exec();
+  const duplicate = await User.findOne({ email: email }).exec();
 
   if (duplicate) return res.sendStatus(409); // conflict
 
@@ -22,6 +30,9 @@ const handleNewUser = async (req, res) => {
     // store the new user
     const result = await User.create({
       username: user,
+      fullname: fullname,
+      email: email,
+      phonenum: phoneNum,
       password: hashedPwd,
     });
 

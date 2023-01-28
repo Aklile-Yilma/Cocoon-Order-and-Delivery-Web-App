@@ -1,14 +1,22 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const { ROLES_LIST } = require("../config/roles_list");
+
 const userSchema = new Schema({
-  username: {
+  fullname: {
     type: String,
     required: true,
-    // has to be unique
+  },
+  email: {
+    type: String,
+    required: true,
     unique: true,
   },
-  roles: {
+  phonenum: {
+    type: Number,
+    required: true,
+  },
+  role: {
     type: String,
     default: ROLES_LIST.User,
     enum: Object.values(ROLES_LIST),
